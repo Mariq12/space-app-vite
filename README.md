@@ -37,6 +37,11 @@ Se ejecuta el proyecto con:
      npm start
 Inicia el proyecto en [http://localhost:5173/](http://localhost:5173/) 
 
+## Paquete requerido
+
+    npm install styled-components
+Ir a documentación de [styled-components](https://styled-components.com/docs/basics)
+
 ## Tecnologias
 * React + Vite
 * JavaScript
