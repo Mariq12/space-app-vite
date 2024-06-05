@@ -43,6 +43,28 @@ Styled Components permite escribir CSS real en el JavaScript.
     npm install styled-components
 Ir a documentación de [styled-components](https://styled-components.com/docs/basics)
 
+## Instalación requerida
+#### * [Normalize.css](https://necolas.github.io/normalize.css/)
+Hace que los navegadores muestren los elementos de forma consistente y acorde con los estándares modernos.
+
+**Pasos:**
+1. Ingresar a [Normalize.css](https://necolas.github.io/normalize.css/).
+2. Dar clic en descargar.
+3. Seleccionar el contenido con:
+    
+        Ctrl + a (selecciona)
+
+        Ctrl + v (pega)
+
+Se pega el dentro del index.jsx.
+
+*Ruta:*
+
+    src
+    ├── components
+    │   ├── GlobalStyles
+    │   │   ├── index.jsx
+    
 ## Tecnologias
 * React + Vite
 * JavaScript
