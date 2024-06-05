@@ -37,7 +37,8 @@ Se ejecuta el proyecto con:
      npm start
 Inicia el proyecto en [http://localhost:5173/](http://localhost:5173/) 
 
-## Paquete requerido
+## Librería requerida
+Styled Components permite escribir CSS real en el JavaScript.
 
     npm install styled-components
 Ir a documentación de [styled-components](https://styled-components.com/docs/basics)
