@@ -65,6 +65,8 @@ Se pega el dentro del index.jsx.
     │   ├── GlobalStyles
     │   │   ├── index.jsx
     
+#### * Link de la carpeta de [Assets SpaceApp](https://drive.google.com/drive/folders/1Sq2S9xfNB-CMVWKvZ8nh8SYiiowV-Q8z)
+
 ## Tecnologias
 * React + Vite
 * JavaScript
