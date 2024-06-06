@@ -16,7 +16,16 @@ const Sidebar = () => {
                         Inicio
                     </ItemNavigation>
                     <ItemNavigation activeIcon="icons/mas-vistas-activo.png" idleIcon= "icons/mas-vistas-inactivo.png">
-                        Inicio
+                        Más vistas
+                    </ItemNavigation>
+                    <ItemNavigation activeIcon="icons/me-gusta-activo.png" idleIcon= "icons/me-gusta-inactivo.png">
+                        Más Me Gusta
+                    </ItemNavigation>
+                    <ItemNavigation activeIcon="icons/nuevas-activo.png" idleIcon= "icons/nuevas-inactivo.png">
+                        Nuevas
+                    </ItemNavigation>
+                    <ItemNavigation activeIcon="icons/sorprendeme-activo.png" idleIcon= "icons/sorprendeme-inactivo.png">
+                        Sorpréndame
                     </ItemNavigation>
                 </StyledList>
             </nav>
