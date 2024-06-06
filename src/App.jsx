@@ -10,16 +10,29 @@ background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
 width: 100%;
 min-height: 100vh;
 `
-
+const AppContainer = styled.div`
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+`
+const MainContainer = styled.div`
+  display: flex;
+  gap: 24px;
+`
 function App() {
 
   return (
     <>
       <FondoGradiente>
         <GlobalStyles />
-        <Headboard />
-        <Sidebar />
-        <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
+
+        <AppContainer>
+          <Headboard />
+          <MainContainer>
+            <Sidebar />
+            <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
+          </MainContainer>
+        </AppContainer>
       </FondoGradiente>
     </>
   )
