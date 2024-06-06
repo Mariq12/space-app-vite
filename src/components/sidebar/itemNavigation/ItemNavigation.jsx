@@ -9,6 +9,7 @@ const StyledItemList = styled.li`
     align-items: center;
     gap: 1rem;
     color: ${props => props.$active ? "#7B78E5" : "#D9D9D9"};
+    font-family: ${props => props.$active ? "GandhiSansBold" : "GandhiSansRegular"};
 `
 
 const ItemNavigation = ({children, activeIcon, idleIcon, active=false}) => {
