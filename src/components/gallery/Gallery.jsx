@@ -1,5 +1,5 @@
 import Title from "../title/Title";
-import Tag from "./tags/Tag";
+import Tag from "./tags/Tags";
 import Popular from "./popular/Popular";
 import styled from 'styled-components';
 
