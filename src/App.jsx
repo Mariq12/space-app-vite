@@ -33,6 +33,10 @@ const App = () => {
 const [photosGallery, setPhotosGallery] = useState(photos)
 const [selectedPhoto, setSelectedPhoto] = useState(null)
 
+const toggleFavorite= (photo) => {
+  console.log(photo)
+}
+
   return (
     <>
       <FondoGradiente>
@@ -43,7 +47,7 @@ const [selectedPhoto, setSelectedPhoto] = useState(null)
             <Sidebar />
             <GalleryContent>
               <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
-              <Gallery selectPhoto={photo=>setSelectedPhoto(photo)} photos={photosGallery} />
+              <Gallery selectPhoto={photo=>setSelectedPhoto(photo)} photos={photosGallery} toggleFavorite={toggleFavorite} />
             </GalleryContent>
           </MainContainer>
         </AppContainer>
