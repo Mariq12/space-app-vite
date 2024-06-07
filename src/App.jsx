@@ -31,6 +31,7 @@ const GalleryContent = styled.section`
 
 const App = () => {
 const [photosGallery, setPhotosGallery] = useState(photos)
+const [selectedPhoto, setSelectedPhoto] = useState(null)
 
   return (
     <>
@@ -42,11 +43,11 @@ const [photosGallery, setPhotosGallery] = useState(photos)
             <Sidebar />
             <GalleryContent>
               <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
-              <Gallery photos={photosGallery} />
+              <Gallery SelectPhoto={photo=>setSelectedPhoto (photo)} photos={photosGallery} />
             </GalleryContent>
           </MainContainer>
         </AppContainer>
-        <ModalZoom />
+        <ModalZoom photo={selectedPhoto} />
       </FondoGradiente>
     </>
   )

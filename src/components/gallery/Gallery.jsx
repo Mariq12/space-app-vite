@@ -18,7 +18,7 @@ const ImageContainer = styled.section`
     gap: 24px;
 `
 
-const Gallery = ({photos= []}) => {
+const Gallery = ({photos= [], selectPhoto}) => {
     return (
         <>
             <Tag />
@@ -28,7 +28,9 @@ const Gallery = ({photos= []}) => {
                         Navegue por la galería
                     </Title>
                     <ImageContainer>
-                    {photos.map(photo=><Image key={photo.id} photo={photo} />)}
+                    {photos.map(photo=><Image 
+                    requestZoom={selectPhoto}
+                    key={photo.id} photo={photo} />)}
                     </ImageContainer>
                 </FluidSection>
                 <Popular />
@@ -38,7 +40,8 @@ const Gallery = ({photos= []}) => {
 };
 
 Gallery.propTypes = {
-    photos: PropTypes.array
+    photos: PropTypes.array,
+    selectPhoto: PropTypes.func.isRequired
 }
 
 export default Gallery;

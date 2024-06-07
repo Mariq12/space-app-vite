@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 
-
-const ModalZoom = () => {
+const ModalZoom = ({photo}) => {
     return (
-        <dialog open>
+        <dialog open={!!photo}>
             <p>Greetings, one and all!</p>
             <form method="dialog">
                 <button>OK</button>
@@ -10,5 +10,9 @@ const ModalZoom = () => {
         </dialog>
     )
 }
+
+ModalZoom.propTypes = {
+    photo: PropTypes.string.isRequired
+};
 
 export default ModalZoom

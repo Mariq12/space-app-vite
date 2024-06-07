@@ -37,7 +37,7 @@ const Footer = styled.footer`
     align-items: center;
 `
 
-const Image = ({photo, expandida=false}) => {
+const Image = ({photo, expandida=false, requestZoom}) => {
     return (
         <Figure $expandida={expandida} id={`photo-${photo.id}`}>
             <img src={photo.path} alt={photo.alt} />
@@ -49,6 +49,7 @@ const Image = ({photo, expandida=false}) => {
                         <img src='/icons/favorito.png' alt='Icono de favorito' />
                     </IconButton>
                    {!expandida && <IconButton aria-hidden={expandida}>
+                    {expandida} onClick={() => requestZoom(photo)}
                         <img src='/icons/expandir.png' alt='Icono de expandir' />
                     </IconButton>}
                 </Footer>
@@ -59,7 +60,8 @@ const Image = ({photo, expandida=false}) => {
 
 Image.propTypes = {
     photo: PropTypes.object,
-    expandida: PropTypes.bool
+    expandida: PropTypes.bool,
+    requestZoom: PropTypes.func
 }
 
 export default Image
