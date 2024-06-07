@@ -57,7 +57,7 @@ const toggleFavorite= (photo) => {
             </GalleryContent>
           </MainContainer>
         </AppContainer>
-        <ModalZoom photo={selectedPhoto} />
+        <ModalZoom photo={selectedPhoto} close={()=>setSelectedPhoto(null)} />
       </FondoGradiente>
     </>
   )

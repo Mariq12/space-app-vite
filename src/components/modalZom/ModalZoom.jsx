@@ -29,12 +29,12 @@ const StyledDialogue = styled.dialog`
     }
 `
 
-const ModalZoom = ({ photo }) => {
+const ModalZoom = ({ photo, close }) => {
     return (
         <>
             { photo && <>
                 <Overlay />
-                < StyledDialogue open={!!photo}>
+                < StyledDialogue open={!!photo} onClose={close}>
                     <Image photo={photo} expandida={true} />
                     <form method="dialog">
                         <IconButton>
@@ -49,7 +49,8 @@ const ModalZoom = ({ photo }) => {
 }
 
 ModalZoom.propTypes = {
-    photo: PropTypes.object
+    photo: PropTypes.object,
+    close: PropTypes.func.isRequired
 };
 
 export default ModalZoom
