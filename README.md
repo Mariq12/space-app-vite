@@ -5,6 +5,18 @@ React: Styled Components y manipulando archivos estáticos**.
 
 ![En Progreso](https://img.shields.io/badge/status-en%20progreso-blue)
 
+## Descripción
+Este proyecto es una aplicación creada con React y Vite, que incluye el uso de Styled Components y manipulación de estilos estáticos.
+
+## Características del Proyecto
+En este proyecto se han realizado las siguientes actividades:
+
+* Montar un servidor de desarrollo con Vite.
+* Utilizar Styled-components para crear y estilizar un navbar, un banner y más.
+* Diseñar e implementar componentes React para mostrar imágenes y leyendas.
+* Aplicar estilos personalizados y accesibles a una galería de fotos.
+* Agregar una barra lateral de imágenes populares y un pie de página.
+
 ## Creación de proyecto
 Ejecutar el comando:
 
@@ -44,28 +56,39 @@ Styled Components permite escribir CSS real en el JavaScript.
 Ir a documentación de [styled-components](https://styled-components.com/docs/basics)
 
 ## Instalación requerida
-#### * [Normalize.css](https://necolas.github.io/normalize.css/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
 Hace que los navegadores muestren los elementos de forma consistente y acorde con los estándares modernos.
 
-**Pasos:**
-1. Ingresar a [Normalize.css](https://necolas.github.io/normalize.css/).
-2. Dar clic en descargar.
-3. Seleccionar el contenido con:
+    **Pasos:**
+    1. Ingresar a [Normalize.css](https://necolas.github.io/normalize.css/).
+    2. Dar clic en descargar.
+    3. Seleccionar el contenido con:
     
-        Ctrl + a (selecciona)
+            Ctrl + a (selecciona)
 
-        Ctrl + v (pega)
+            Ctrl + v (pega)
 
-Se pega el dentro del index.jsx.
+        Se pega el dentro del index.jsx.
 
-*Ruta:*
+        *Ruta:*
 
-    src
-    ├── components
-    │   ├── GlobalStyles
-    │   │   ├── index.jsx
+            src
+            ├── components
+            │   ├── GlobalStyles
+            │   │   ├── index.jsx
     
-#### * Link de la carpeta de [Assets SpaceApp](https://drive.google.com/drive/folders/1Sq2S9xfNB-CMVWKvZ8nh8SYiiowV-Q8z)
+* Link de la carpeta de [Assets SpaceApp](https://drive.google.com/drive/folders/1Sq2S9xfNB-CMVWKvZ8nh8SYiiowV-Q8z)
+
+* Ventana modal usando [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+
+        <dialog open>
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+
+
 
 ## Tecnologias
 * React + Vite

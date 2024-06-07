@@ -7,6 +7,7 @@ import bannner from "./assets/banner.png"
 import Gallery from "./components/gallery/Gallery"
 import photos from "./photos.json"
 import { useState } from "react"
+import ModalZoom from "./components/modalZom/ModalZoom"
 
 const FondoGradiente = styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -45,6 +46,7 @@ const [photosGallery, setPhotosGallery] = useState(photos)
             </GalleryContent>
           </MainContainer>
         </AppContainer>
+        <ModalZoom />
       </FondoGradiente>
     </>
   )
