@@ -34,7 +34,13 @@ const [photosGallery, setPhotosGallery] = useState(photos)
 const [selectedPhoto, setSelectedPhoto] = useState(null)
 
 const toggleFavorite= (photo) => {
-  console.log(photo)
+  //console.log(photo)
+  setPhotosGallery(photosGallery.map(photoGallery=>{
+    return {
+      ...photoGallery,
+      favorite: photoGallery.id === photo.id ? !photo.favorite : photoGallery.favorite
+    }
+  }))
 }
 
   return (

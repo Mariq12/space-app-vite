@@ -38,6 +38,7 @@ const Footer = styled.footer`
 `
 
 const Image = ({ photo, expandida = false, requestZoom, toggleFavorite }) => {
+    const favoriteIcon = photo.favorite ? '/icons/favorito-activo.png' : '/icons/favorito.png'
     return (
         <Figure $expandida={expandida} id={`photo-${photo.id}`}>
             <img src={photo.path} alt={photo.alt} />
@@ -46,7 +47,7 @@ const Image = ({ photo, expandida = false, requestZoom, toggleFavorite }) => {
                 <Footer>
                     <h4>{photo.fuente}</h4>
                     <IconButton onClick={()=>toggleFavorite(photo)}>
-                        <img src='/icons/favorito.png' alt='Icono de favorito' />
+                        <img src={favoriteIcon} alt='Icono de favorito' />
                     </IconButton>
                     {!expandida && <IconButton aria-hidden=
                         {expandida} onClick={() => requestZoom(photo)}>
