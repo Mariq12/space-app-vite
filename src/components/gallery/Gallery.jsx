@@ -28,9 +28,10 @@ const Gallery = ({photos= [], selectPhoto}) => {
                         Navegue por la galería
                     </Title>
                     <ImageContainer>
-                    {photos.map(photo=><Image 
-                    requestZoom={selectPhoto}
-                    key={photo.id} photo={photo} />)}
+                    {photos.map(photo=>(<Image 
+                    requestZoom={selectPhoto} 
+                        key={photo.id} 
+                        photo={photo} />))}
                     </ImageContainer>
                 </FluidSection>
                 <Popular />

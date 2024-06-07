@@ -43,7 +43,7 @@ const [selectedPhoto, setSelectedPhoto] = useState(null)
             <Sidebar />
             <GalleryContent>
               <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
-              <Gallery SelectPhoto={photo=>setSelectedPhoto (photo)} photos={photosGallery} />
+              <Gallery selectPhoto={photo=>setSelectedPhoto(photo)} photos={photosGallery} />
             </GalleryContent>
           </MainContainer>
         </AppContainer>

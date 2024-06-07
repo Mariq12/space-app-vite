@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types';
+import Image from '../gallery/image/Image';
 
-const ModalZoom = ({photo}) => {
+const ModalZoom = ({ photo }) => {
     return (
-        <dialog open={!!photo}>
-            <p>Greetings, one and all!</p>
-            <form method="dialog">
-                <button>OK</button>
-            </form>
-        </dialog>
+        <>
+            { photo && <dialog open={!!photo}>
+                    <Image photo={photo} expandida={true} />
+                    <form method="dialog">
+                        <button>OK</button>
+                    </form>
+                </dialog>
+            }
+        </>
     )
 }
 
 ModalZoom.propTypes = {
-    photo: PropTypes.string.isRequired
+    photo: PropTypes.object
 };
 
 export default ModalZoom

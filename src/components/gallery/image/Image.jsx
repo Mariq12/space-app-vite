@@ -48,8 +48,8 @@ const Image = ({photo, expandida=false, requestZoom}) => {
                     <IconButton>
                         <img src='/icons/favorito.png' alt='Icono de favorito' />
                     </IconButton>
-                   {!expandida && <IconButton aria-hidden={expandida}>
-                    {expandida} onClick={() => requestZoom(photo)}
+                   {!expandida && <IconButton aria-hidden=
+                   {expandida} onClick={()=>requestZoom(photo)}>
                         <img src='/icons/expandir.png' alt='Icono de expandir' />
                     </IconButton>}
                 </Footer>
