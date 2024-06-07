@@ -5,6 +5,8 @@ import Sidebar from "./components/sidebar/Sidebar"
 import Banner from "./components/banner/Banner"
 import bannner from "./assets/banner.png"
 import Gallery from "./components/gallery/Gallery"
+import photos from "./photos.json"
+import { useState } from "react"
 
 const FondoGradiente = styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -26,7 +28,8 @@ const GalleryContent = styled.section`
   flex-grow: 1;
 `
 
-function App() {
+const App = () => {
+const [photosGallery, setPhotosGallery] = useState(photos)
 
   return (
     <>
@@ -38,7 +41,7 @@ function App() {
             <Sidebar />
             <GalleryContent>
               <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
-              <Gallery />
+              <Gallery photos={photosGallery} />
             </GalleryContent>
           </MainContainer>
         </AppContainer>
