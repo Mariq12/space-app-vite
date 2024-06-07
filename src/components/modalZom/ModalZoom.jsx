@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Image from '../gallery/image/Image';
 import styled from 'styled-components';
+import IconButton from '../iconButton/IconButton';
 
 const Overlay= styled.div`
     background-color: rgba(0, 0, 0, .7);
@@ -13,6 +14,19 @@ const Overlay= styled.div`
 const StyledDialogue = styled.dialog`
     position: absolute;
     top: 294px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    width: 1156px;
+    display: flex;
+    justify-content: center;
+    form {
+        button {
+            position: relative;
+            top: 20px;
+            right: 60px;
+        }
+    }
 `
 
 const ModalZoom = ({ photo }) => {
@@ -23,7 +37,9 @@ const ModalZoom = ({ photo }) => {
                 < StyledDialogue open={!!photo}>
                     <Image photo={photo} expandida={true} />
                     <form method="dialog">
-                        <button>OK</button>
+                        <IconButton>
+                            <img src='/icons/cerrar.png' alt='Icono de cerrar' />
+                        </IconButton>
                     </form>
                 </ StyledDialogue>
             </>
