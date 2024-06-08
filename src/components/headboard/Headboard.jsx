@@ -5,9 +5,21 @@ import PropTypes from 'prop-types';
 const StylizedHeader = styled.header`
     padding: 60px 0;
     display: flex;
-    justify-content: space-between;
-    img{
-        width: 212px;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 30vw;
+        max-width: 212px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+            margin-bottom: 0;
+        }
     }
 `;
 

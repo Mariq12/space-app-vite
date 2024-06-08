@@ -25,8 +25,9 @@ const Boton = styled.button`
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
-    width: 100%;
+    width: 87%;
     margin-top: 16px;
+    margin-left: 24px;
 `
 
 const SectionContainer = styled.section`

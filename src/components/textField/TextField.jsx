@@ -6,7 +6,14 @@ import { useState } from 'react';
 const StylizedContainer = styled.div`
     position: relative;
     display: inline-block;
+    width: 100%;
+    max-width: 566px;
+
+    @media (max-width: 768px) {
+        max-width: 80%; 
+    }
 `;
+
 const StyledTextField = styled.input`
     height: 56px;
     padding: 12px 16px;
@@ -15,13 +22,19 @@ const StyledTextField = styled.input`
     border-color: #C98CF1;
     background: transparent;
     box-sizing: border-box;
-    width: 566px;
+    width: 100%;
     color: #D9D9D9;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
     outline: none;
-`
+
+    @media (max-width: 768px) {
+        font-size: 16px; 
+        padding: 10px 14px;
+    }
+`;
+
 const IconMagnifier = styled.img`
     position: absolute;
     top: 10px;
@@ -29,6 +42,12 @@ const IconMagnifier = styled.img`
     width: 38px !important;
     height: 38px;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        top: 9px;
+        right: 9px;
+        width: 100%;
+    }
 `;
 
 const TextField = ({ setFilter }) => {
