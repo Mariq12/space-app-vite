@@ -9,8 +9,11 @@ const StylizedContainer = styled.div`
     width: 100%;
     max-width: 566px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 744px) {
         max-width: 80%; 
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1rem;
     }
 `;
 
@@ -29,9 +32,10 @@ const StyledTextField = styled.input`
     line-height: 20px;
     outline: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 744px) {
         font-size: 16px; 
         padding: 10px 14px;
+        width: 426px;
     }
 `;
 
