@@ -19,6 +19,11 @@ const GalleryContainer = styled.div`
         justify-content:flex-start;
         align-items: flex-start;
     }
+    @media (min-width: 360px) and (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
 const FluidSection = styled.section`
     flex-grow: 1;

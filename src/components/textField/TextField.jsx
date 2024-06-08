@@ -9,6 +9,9 @@ const StylizedContainer = styled.div`
     width: 100%;
     max-width: 566px;
 
+    @media (max-width: 1024px) {
+        margin-right: 2.2rem;
+    }
     @media (max-width: 744px) {
         max-width: 80%; 
         display: flex;

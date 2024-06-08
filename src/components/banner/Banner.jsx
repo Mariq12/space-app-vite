@@ -14,6 +14,12 @@ const StyledFigure = styled.figure`
     background-size: cover;
     padding: 20px;
 
+    @media (max-width: 1024px) {
+        height: 276px;
+        width: 93%;
+        margin-left: 1rem;
+        padding: 0;
+    }
     @media (max-width: 744px) {
         height: 276px;
         width: 426px;
@@ -22,13 +28,13 @@ const StyledFigure = styled.figure`
     }
     @media (max-width: 688px) {
         height: 276px;
-        width: 93%;
+        width: 87%;
         margin-left: .5rem;
         padding: 0;
     }
 
     @media (min-width: 360px) and (max-width: 480px) {
-        width: 95%;
+        width: 85%;
         min-height: 150px;
         display: flex;
         align-items: center;

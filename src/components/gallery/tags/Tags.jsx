@@ -8,6 +8,7 @@ const BarTags = styled.div`
     gap: 64px;
     margin-top: 56px;
 
+    
     @media (max-width: 744px) {
         display: flex;
         align-items: start;
@@ -16,13 +17,17 @@ const BarTags = styled.div`
         margin-left: 0;
     }
     @media (min-width: 360px) and (max-width: 480px) {
-        margin-left: 0%.5rem;
+        margin-left: 0.5rem;
     }
 `
 const TitleTags = styled.p`
     color: #D9D9D9;
     font-size: 24px;
     margin: 0;
+
+    @media (min-width: 360px) and (max-width: 480px) {
+        margin-left: 1.2rem;
+    }
 `
 const Tag = styled.button`
     font-size: 24px;
@@ -37,7 +42,12 @@ const Tag = styled.button`
     &:hover{
         border-color: #C98CF1;
     }
-    
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+        margin: 0;
+        padding: 8px;
+    }
     @media (max-width: 744px) {
         font-size: 18px;
         padding: 8px;
@@ -46,9 +56,12 @@ const Tag = styled.button`
         font-size: 15px;
     }
     @media (min-width: 360px) and (max-width: 480px) {
-        margin: 0;
-        font-size: 14px;
+        margin-left: 0.8rem;
+        font-size: 13px;
         padding: 7px;
+    }
+    @media (min-width: 393px){
+        margin-right: 0.8rem;
     }
 `
 const Div = styled.div`
@@ -56,8 +69,21 @@ const Div = styled.div`
     gap: 24px;
     justify-content: end;
 
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    @media (max-width: 375px) and (max-width: 480px){
+        gap: 8px;
+        width: 90%;
+        margin: 0;
+    }
     @media (min-width: 360px) and (max-width: 480px) {
-        gap: 10px;
+        gap: 8px;
+        padding: 0;
+        margin: 1rem;
+        margin-left: 0.5rem;
     }
 `
 const Tags = ({ setTag }) => {

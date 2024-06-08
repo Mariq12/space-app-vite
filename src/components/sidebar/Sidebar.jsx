@@ -8,8 +8,11 @@ const StyledList = styled.ul`
     margin: 0;
     list-style: none;
     
+    @media (max-width: 1024px){
+        margin-left: 2rem;
+    }
     @media (max-width: 688px) {
-        margin-left: 1rem;
+        margin-left: 1.5rem;
     }
     @media (min-width: 360px) and (max-width: 480px) {
         display: ${props => (props.showMenu ? "flex" : "none")};

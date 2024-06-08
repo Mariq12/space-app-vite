@@ -10,6 +10,10 @@ const ColumnPhotos = styled.section`
     align-items: center;
     gap: 1rem;
     width: 100%;
+
+    @media (max-width: 1024px) {
+        margin-right: 4rem;
+    }
     @media (max-width: 744px) {
         width: 70vh;
         height: auto;
@@ -24,6 +28,7 @@ const Imagen = styled.img`
     height: 158px;
     border-radius: 20px;
     margin-left: 24px;
+
     @media (max-width: 744px) {
         aspect-ratio: auto;
         max-width: 100%;
@@ -45,6 +50,11 @@ const Boton = styled.button`
     width: 87%;
     margin-top: 16px;
     margin-left: 24px;
+
+    @media (max-width: 1024px) {
+        width: 65%;
+
+    }
     @media (max-width: 744px) {
         width: 70vh;
         margin-left: 0;

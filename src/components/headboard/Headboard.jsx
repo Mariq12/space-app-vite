@@ -12,7 +12,11 @@ const StylizedHeader = styled.header`
         max-width: 212px;
         margin-bottom: 20px;
     }
-
+    @media (max-width: 1024px) {
+        img {
+            margin-left: 1.5rem;
+        }
+    }
     @media (min-width: 744px) {
         flex-direction: row;
         justify-content: space-between;
