@@ -8,15 +8,35 @@ import Image from "./image/Image";
 const GalleryContainer = styled.div`
     display: flex;
     margin-bottom: 24px;
+    @media (max-width: 744px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
 `
 const FluidSection = styled.section`
     flex-grow: 1;
+    @media (max-width: 744px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 `
 const ImageContainer = styled.section`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
+    @media (max-width: 744px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+    }
 `
 
 const Gallery = ({photos= [], setTag, selectPhoto, toggleFavorite}) => {

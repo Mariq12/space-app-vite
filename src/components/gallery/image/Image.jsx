@@ -30,6 +30,10 @@ const Figure = styled.figure`
             font-size: 16px;
         }
     }
+
+    @media (max-width: 744px) {
+        width: 70vh;
+    }
 `
 const Footer = styled.footer`
     display: flex;

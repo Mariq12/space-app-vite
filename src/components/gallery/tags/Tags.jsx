@@ -7,6 +7,13 @@ const BarTags = styled.div`
     align-items: center;
     gap: 64px;
     margin-top: 56px;
+    @media (max-width: 744px) {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 24px;
+        margin-left: 0;
+    }
 `
 const TitleTags = styled.p`
     color: #D9D9D9;
@@ -26,6 +33,11 @@ const Tag = styled.button`
     &:hover{
         border-color: #C98CF1;
     }
+    @media (max-width: 744px) {
+        font-size: 18px;
+        padding: 8px;
+    }
+
 `
 const Div = styled.div`
     display: flex;

@@ -27,6 +27,10 @@ const StyledDialogue = styled.dialog`
             right: 60px;
         }
     }
+    @media (max-width: 744px) {
+        width: 100%;
+        margin-left: 1rem;
+    }
 `;
 
 const ModalZoom = ({ photo, close, toggleFavorite }) => {

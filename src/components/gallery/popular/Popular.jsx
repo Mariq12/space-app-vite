@@ -6,7 +6,14 @@ import photos from './photos-popular.json'
 const ColumnPhotos = styled.section`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    width: 100%;
+    @media (max-width: 744px) and (min-width: 688px) {
+        width: 70vh;
+        height: auto;
+    }
 `
 
 const Imagen = styled.img`
@@ -14,6 +21,13 @@ const Imagen = styled.img`
     height: 158px;
     border-radius: 20px;
     margin-left: 24px;
+    @media (max-width: 744px) {
+        aspect-ratio: auto;
+        max-width: 100%;
+        width: 70vh;
+        height: auto;
+        margin-left: 0;
+    }
 `
 
 const Boton = styled.button`
@@ -28,6 +42,10 @@ const Boton = styled.button`
     width: 87%;
     margin-top: 16px;
     margin-left: 24px;
+    @media (max-width: 744px) {
+        width: 70vh;
+        margin-left: 0;
+    }
 `
 
 const SectionContainer = styled.section`
