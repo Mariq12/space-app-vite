@@ -3,10 +3,16 @@
 Proyecto React + Vite realizado en el **Curso de
 React: Styled Components y manipulando archivos estáticos**.
 
-![En Progreso](https://img.shields.io/badge/status-en%20progreso-blue)
+![Completado](https://img.shields.io/badge/status-completado-brightgreen) 
+
+✔️ **El proyecto del curso de React**
+
+**Styled Components y manipulando archivos estáticos**
 
 ## Descripción
-Este proyecto es una aplicación creada con React y Vite, que incluye el uso de Styled Components y manipulación de estilos estáticos.
+Este proyecto es una aplicación creada con React y Vite, que incluye el uso de Styled Components y manipulación de estilos estáticos. 
+
+Se utiliza Vte para montar el servidor local, y Styled Components para dar estilos a los componentes. Además, de trabajar con archivos estáticos para poder renderizar la aplicación. Se emplea Estados para manejar el estado de cada uno de los componentes y aplicación del concepto de Prop Drilling.
 
 ## Características del Proyecto
 En este proyecto se han realizado las siguientes actividades:
@@ -81,6 +87,8 @@ Hace que los navegadores muestren los elementos de forma consistente y acorde co
 
 * Ventana modal usando [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 
+    *Estructura base:*
+
         <dialog open>
             <p>Greetings, one and all!</p>
             <form method="dialog">
@@ -91,7 +99,7 @@ Hace que los navegadores muestren los elementos de forma consistente y acorde co
 
 
 ## Tecnologias
-* React + Vite
+* [React + Vite](https://vitejs.dev/guide/)
 * JavaScript
 
 ## Herramientas de diseño
