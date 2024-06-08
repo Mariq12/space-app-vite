@@ -3,14 +3,14 @@ import Image from '../gallery/image/Image';
 import styled from 'styled-components';
 import IconButton from '../iconButton/IconButton';
 
-const Overlay= styled.div`
+const Overlay = styled.div`
     background-color: rgba(0, 0, 0, .7);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-`
+`;
 const StyledDialogue = styled.dialog`
     position: absolute;
     top: 294px;
@@ -27,31 +27,32 @@ const StyledDialogue = styled.dialog`
             right: 60px;
         }
     }
-`
+`;
 
-const ModalZoom = ({ photo, close, toogleFavorite }) => {
+const ModalZoom = ({ photo, close, toggleFavorite }) => {
     return (
         <>
-            { photo && <>
-                <Overlay />
-                < StyledDialogue open={!!photo} onClose={close}>
-                    <Image photo={photo} expandida={true} toogleFavorite={toogleFavorite}/>
-                    <form method="dialog">
-                        <IconButton>
-                            <img src='/icons/cerrar.png' alt='Icono de cerrar' />
-                        </IconButton>
-                    </form>
-                </ StyledDialogue>
-            </>
-            }
+            {photo && (
+                <>
+                    <Overlay />
+                    <StyledDialogue open={!!photo} onClose={close}>
+                        <Image photo={photo} expandida={true} toggleFavorite={toggleFavorite} />
+                        <form method="dialog">
+                            <IconButton>
+                                <img src='/icons/cerrar.png' alt='Icono de cerrar' />
+                            </IconButton>
+                        </form>
+                    </StyledDialogue>
+                </>
+            )}
         </>
-    )
+    );
 }
 
 ModalZoom.propTypes = {
     photo: PropTypes.object,
     close: PropTypes.func.isRequired,
-    toogleFavorite: PropTypes.func.isRequired
+    toggleFavorite: PropTypes.func.isRequired
 };
 
-export default ModalZoom
+export default ModalZoom;

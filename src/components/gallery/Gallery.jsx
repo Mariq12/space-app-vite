@@ -18,7 +18,8 @@ const ImageContainer = styled.section`
     gap: 24px;
 `
 
-const Gallery = ({photos= [], setTag, selectedPhoto, toggleFavorite}) => {
+const Gallery = ({photos= [], setTag, selectPhoto, toggleFavorite}) => {
+    //console.log("Photos in Gallery:", photos); // Log para depuración
     return (
         <>
             <Tag setTag={setTag} />
@@ -30,7 +31,7 @@ const Gallery = ({photos= [], setTag, selectedPhoto, toggleFavorite}) => {
                     <ImageContainer>
                     {photos.map(photo=>(<Image 
                     toggleFavorite={toggleFavorite}
-                    requestZoom={selectedPhoto} 
+                    requestZoom={selectPhoto} 
                         key={photo.id} 
                         photo={photo} />))}
                     </ImageContainer>
@@ -43,7 +44,7 @@ const Gallery = ({photos= [], setTag, selectedPhoto, toggleFavorite}) => {
 
 Gallery.propTypes = {
     photos: PropTypes.array,
-    selectedPhoto: PropTypes.func.isRequired,
+    selectPhoto: PropTypes.func.isRequired,
     toggleFavorite: PropTypes.func.isRequired,
     setTag: PropTypes.func.isRequired
 }

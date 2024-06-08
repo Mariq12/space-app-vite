@@ -1,6 +1,7 @@
 import { styled } from "styled-components"
 import search from '../../assets/icons/search.png'
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const StylizedContainer = styled.div`
     position: relative;
@@ -27,13 +28,29 @@ const IconMagnifier = styled.img`
     right: 10px;
     width: 38px !important;
     height: 38px;
+    cursor: pointer;
 `;
 
 const TextField = ({ setFilter }) => {
+    const [inputValue, setInputValue] = useState('');
+
+    const handleSearch = () => {
+        setFilter(inputValue);
+    }
+
     return (
         <StylizedContainer>
-            <StyledTextField onChange={(event) => { setFilter(event.target.value)} } type="text" placeholder="¿Qué estás buscando?"/>
-            <IconMagnifier src={search} alt="ícono de lupa" />
+            <StyledTextField 
+                value={inputValue}
+                onChange={(event) => setInputValue(event.target.value)} 
+                type="text" 
+                placeholder="¿Qué estás buscando?" 
+            />
+            <IconMagnifier 
+                src={search} 
+                alt="ícono de lupa" 
+                onClick={handleSearch}
+            />
         </StylizedContainer>
     )
 }
