@@ -37,7 +37,9 @@ const Tag = styled.button`
         font-size: 18px;
         padding: 8px;
     }
-
+    @media (max-width: 688px) {
+        font-size: 15px;
+    }
 `
 const Div = styled.div`
     display: flex;

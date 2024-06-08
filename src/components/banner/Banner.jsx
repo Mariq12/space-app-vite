@@ -21,6 +21,13 @@ const StyledFigure = styled.figure`
     padding: 0;
 }
 
+@media (max-width: 688px) {
+    height: 276px;
+    width: 93%;
+    margin-left: .5rem;
+    padding: 0;
+}
+
 @media (max-width: 480px) {
     min-height: 150px;
     padding: 5px;

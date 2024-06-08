@@ -14,7 +14,11 @@ const GalleryContainer = styled.div`
         align-items: center;
         flex-direction: column;
     }
-
+    @media (max-width: 688px) {
+        display: flex;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
 `
 const FluidSection = styled.section`
     flex-grow: 1;
@@ -23,6 +27,11 @@ const FluidSection = styled.section`
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    @media (max-width: 688px) {
+        display: flex;
+        justify-content:flex-start;
+        align-items: flex-start;
     }
 `
 const ImageContainer = styled.section`

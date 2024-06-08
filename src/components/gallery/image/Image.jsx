@@ -34,6 +34,9 @@ const Figure = styled.figure`
     @media (max-width: 744px) {
         width: 70vh;
     }
+    @media (max-width: 688px) {
+        width: 42vh;
+    }
 `
 const Footer = styled.footer`
     display: flex;

@@ -10,9 +10,12 @@ const ColumnPhotos = styled.section`
     align-items: center;
     gap: 1rem;
     width: 100%;
-    @media (max-width: 744px) and (min-width: 688px) {
+    @media (max-width: 744px) {
         width: 70vh;
         height: auto;
+    }
+    @media (max-width: 688px) {
+        width: 42vh;
     }
 `
 
@@ -45,6 +48,9 @@ const Boton = styled.button`
     @media (max-width: 744px) {
         width: 70vh;
         margin-left: 0;
+    }
+    @media (max-width: 688px) {
+        width: 42vh;
     }
 `
 

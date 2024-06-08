@@ -5,6 +5,9 @@ const StyledList = styled.ul`
     padding: 0;
     margin: 0;
     list-style: none;
+    @media (max-width: 688px) {
+        margin-left: 1rem;
+    }
 `
 
 const Sidebar = () => {
