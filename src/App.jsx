@@ -6,8 +6,9 @@ import Banner from "./components/banner/Banner"
 import bannner from "./assets/banner.png"
 import Gallery from "./components/gallery/Gallery"
 import photos from "./photos.json"
-import { useState } from "react"
 import ModalZoom from "./components/modalZom/ModalZoom"
+import { useEffect, useState } from "react"
+import Footer from "./components/footer/Footer"
 
 const FondoGradiente = styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -31,7 +32,19 @@ const GalleryContent = styled.section`
 
 const App = () => {
 const [photosGallery, setPhotosGallery] = useState(photos)
+const [filter, setFilter] = useState('')
+const [tag, setTag] = useState(0)
 const [selectedPhoto, setSelectedPhoto] = useState(null)
+
+//Para filtrar la búsqueda de las fotos
+useEffect(() => {
+  const filterPhotos = photos.filter(photo => {
+    const filterByTag = !tag || photo.tagId === tag;
+    const filterByTitle = !filter || photo.title.toLowerCase().includes(filter.toLowerCase())
+    return filterByTag && filterByTitle
+  })
+  setPhotosGallery(filterPhotos)
+}, [filter, tag])
 
 const toggleFavorite= (photo) => {
   if(photo.id === selectedPhoto?.id){
@@ -55,12 +68,16 @@ const toggleFavorite= (photo) => {
       <FondoGradiente>
         <GlobalStyles />
         <AppContainer>
-          <Headboard />
+          <Headboard 
+            filter={filter}
+            setFilter={setFilter}
+            />
           <MainContainer>
             <Sidebar />
             <GalleryContent>
               <Banner texto="¡Bienvenidos a la galería más completa de fotos!" backgroundImage={bannner} />
-              <Gallery selectPhoto={photo=>setSelectedPhoto(photo)} photos={photosGallery} toggleFavorite={toggleFavorite} />
+              <Gallery selectPhoto={photo=>setSelectedPhoto(photo)} photos={photosGallery} toggleFavorite={toggleFavorite}
+              setTag={setTag} />
             </GalleryContent>
           </MainContainer>
         </AppContainer>
@@ -68,6 +85,7 @@ const toggleFavorite= (photo) => {
         close={()=>setSelectedPhoto(null)} 
         toggleFavorite={toggleFavorite} />
       </FondoGradiente>
+      <Footer />
     </>
   )
 }

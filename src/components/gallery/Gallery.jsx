@@ -18,10 +18,10 @@ const ImageContainer = styled.section`
     gap: 24px;
 `
 
-const Gallery = ({photos= [], selectPhoto, toggleFavorite}) => {
+const Gallery = ({photos= [], setTag, selectedPhoto, toggleFavorite}) => {
     return (
         <>
-            <Tag />
+            <Tag setTag={setTag} />
             <GalleryContainer>
                 <FluidSection>
                     <Title>
@@ -30,7 +30,7 @@ const Gallery = ({photos= [], selectPhoto, toggleFavorite}) => {
                     <ImageContainer>
                     {photos.map(photo=>(<Image 
                     toggleFavorite={toggleFavorite}
-                    requestZoom={selectPhoto} 
+                    requestZoom={selectedPhoto} 
                         key={photo.id} 
                         photo={photo} />))}
                     </ImageContainer>
@@ -43,8 +43,9 @@ const Gallery = ({photos= [], selectPhoto, toggleFavorite}) => {
 
 Gallery.propTypes = {
     photos: PropTypes.array,
-    selectPhoto: PropTypes.func.isRequired,
-    toggleFavorite: PropTypes.func.isRequired
+    selectedPhoto: PropTypes.func.isRequired,
+    toggleFavorite: PropTypes.func.isRequired,
+    setTag: PropTypes.func.isRequired
 }
 
 export default Gallery;

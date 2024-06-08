@@ -38,7 +38,12 @@ const Footer = styled.footer`
 `
 
 const Image = ({ photo, expandida = false, requestZoom, toggleFavorite }) => {
-    const favoriteIcon = photo.favorite ? '/icons/favorito-activo.png' : '/icons/favorito.png'
+    //const favoriteIcon = photo.favorite ? '/icons/favorito-activo.png' : '/icons/favorito.png'
+    let favoriteIcon = '/icons/favorito.png';
+    if (photo.favorite) {
+        favoriteIcon = '/icons/favorito-activo.png'
+    }
+
     return (
         <Figure $expandida={expandida} id={`photo-${photo.id}`}>
             <img src={photo.path} alt={photo.alt} />
