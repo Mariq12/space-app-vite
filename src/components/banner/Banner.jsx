@@ -26,13 +26,15 @@ const StyledFigure = styled.figure`
         margin-left: .5rem;
         padding: 0;
     }
+
     @media (min-width: 360px) and (max-width: 480px) {
-        width: 80%;
+        width: 95%;
         min-height: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
+        padding: 0.5rem;
         }
 `;
 
