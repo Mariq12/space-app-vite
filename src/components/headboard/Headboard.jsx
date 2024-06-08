@@ -7,7 +7,6 @@ const StylizedHeader = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     img {
         width: 30vw;
         max-width: 212px;
@@ -19,6 +18,16 @@ const StylizedHeader = styled.header`
         justify-content: space-between;
         img {
             margin-bottom: 0;
+        }
+    }
+    @media (min-width: 360px) and (max-width: 480px) {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        order: 2;
+        img {
+            margin-bottom: 1rem;
+            margin-right: 1rem;
         }
     }
 `;

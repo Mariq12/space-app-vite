@@ -7,12 +7,16 @@ const BarTags = styled.div`
     align-items: center;
     gap: 64px;
     margin-top: 56px;
+
     @media (max-width: 744px) {
         display: flex;
         align-items: start;
         flex-direction: column;
         gap: 24px;
         margin-left: 0;
+    }
+    @media (min-width: 360px) and (max-width: 480px) {
+        margin-left: 0%.5rem;
     }
 `
 const TitleTags = styled.p`
@@ -33,6 +37,7 @@ const Tag = styled.button`
     &:hover{
         border-color: #C98CF1;
     }
+    
     @media (max-width: 744px) {
         font-size: 18px;
         padding: 8px;
@@ -40,11 +45,20 @@ const Tag = styled.button`
     @media (max-width: 688px) {
         font-size: 15px;
     }
+    @media (min-width: 360px) and (max-width: 480px) {
+        margin: 0;
+        font-size: 14px;
+        padding: 7px;
+    }
 `
 const Div = styled.div`
     display: flex;
     gap: 24px;
     justify-content: end;
+
+    @media (min-width: 360px) and (max-width: 480px) {
+        gap: 10px;
+    }
 `
 const Tags = ({ setTag }) => {
     return (

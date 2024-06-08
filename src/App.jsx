@@ -26,6 +26,10 @@ const AppContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   gap: 24px;
+  @media (min-width: 360px) and (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const GalleryContent = styled.section`

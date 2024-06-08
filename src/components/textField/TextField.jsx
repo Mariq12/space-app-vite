@@ -37,6 +37,11 @@ const StyledTextField = styled.input`
         padding: 10px 14px;
         width: 426px;
     }
+    @media (min-width: 360px) and (max-width: 480px) {
+        font-size: 18px; 
+        width: 450px;
+        margin-left: 0;
+    }
 `;
 
 const IconMagnifier = styled.img`

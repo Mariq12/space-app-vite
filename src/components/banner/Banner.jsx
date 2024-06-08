@@ -14,24 +14,26 @@ const StyledFigure = styled.figure`
     background-size: cover;
     padding: 20px;
 
-@media (max-width: 744px) {
-    height: 276px;
-    width: 426px;
-    margin-left: 4.4rem;
-    padding: 0;
-}
-
-@media (max-width: 688px) {
-    height: 276px;
-    width: 93%;
-    margin-left: .5rem;
-    padding: 0;
-}
-
-@media (max-width: 480px) {
-    min-height: 150px;
-    padding: 5px;
-}
+    @media (max-width: 744px) {
+        height: 276px;
+        width: 426px;
+        margin-left: 4.4rem;
+        padding: 0;
+    }
+    @media (max-width: 688px) {
+        height: 276px;
+        width: 93%;
+        margin-left: .5rem;
+        padding: 0;
+    }
+    @media (min-width: 360px) and (max-width: 480px) {
+        width: 80%;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        }
 `;
 
 const StyledTitle = styled.h1`
@@ -42,17 +44,16 @@ const StyledTitle = styled.h1`
     max-width: 300px;
     padding: 0 64px;
 
-@media (max-width: 744px) {
-    font-size: 28px;
-    line-height: 40px;
-    padding: 0 32px;
-}
-
-@media (max-width: 480px) {
-    font-size: 24px;
-    line-height: 32px;
-    padding: 0 16px;
-}
+    @media (max-width: 744px) {
+        font-size: 28px;
+        line-height: 40px;
+        padding: 0 32px;
+    }
+    @media (max-width: 480px) {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 0 16px;
+    }
 `;
 
 const Banner = ({ texto, backgroundImage }) => {
